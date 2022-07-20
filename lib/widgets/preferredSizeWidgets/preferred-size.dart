@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomTabBarWithIcon extends StatelessWidget
     implements PreferredSizeWidget {
-  CustomTabBarWithIcon({Key? key, required this.appBarContext,  required this.function })
+  CustomTabBarWithIcon(
+      {Key? key, required this.appBarContext, required this.function})
       : super(key: key);
 
   BuildContext appBarContext;
@@ -13,21 +14,27 @@ class CustomTabBarWithIcon extends StatelessWidget
     return Row(
       children: [
         IconButton(
-          onPressed: ()=> function,
+          onPressed: () => function,
           icon: const Icon(Icons.camera_alt_rounded),
         ),
-        const Expanded(
-          child: TabBar(tabs: [
-            Tab(
-              child: Text('CONVERSAS'),
-            ),
-            Tab(
-              child: Text('STATUS'),
-            ),
-            Tab(
-              child: Text('CHAMADAS'),
-            ),
-          ]),
+        Expanded(
+          child: TabBar(
+              indicatorSize: TabBarIndicatorSize.label,
+              indicatorColor: Colors.white,
+              indicatorWeight: 6,
+              automaticIndicatorColorAdjustment: true,
+              splashFactory: NoSplash.splashFactory,
+              tabs: [
+                Tab(
+                  child: Text('CONVERSAS'),
+                ),
+                Tab(
+                  child: Text('STATUS'),
+                ),
+                Tab(
+                  child: Text('CHAMADAS'),
+                ),
+              ]),
         ),
       ],
     );
