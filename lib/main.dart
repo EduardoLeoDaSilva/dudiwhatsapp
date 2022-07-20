@@ -9,7 +9,7 @@ Future main(List<String> args) async{
 
 GetIService().setup();
 
-  runApp(const MaterialApp(
+  runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -21,8 +23,8 @@ class ContactTile extends StatelessWidget {
             children: [
               const SizedBox(
                 child: CircleAvatar(),
-                width: 50,
-                height: 50,
+                width: 60,
+                height: 60,
               ),
               const SizedBox(
                 width: 12,
@@ -31,13 +33,34 @@ class ContactTile extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text('Eduardo Leonardo'),
-                    Text('Mensagem teste')
+                    Text(
+                      'Eduardo Leonardo',
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    ),
+                    Text('Mensagem teste', style: TextStyle(color: Color.fromRGBO(135, 135, 135, 1)))
                   ],
                 ),
               ),
               Column(
-                children: const [Text('9:30'), Text('2')],
+                children: [
+                  Text(
+                    '9:30',
+                    style: TextStyle(color: Color.fromRGBO(0, 197, 0, 1)),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    width: 25,
+                    height: 25,
+                    child: Text(
+                      '2',
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    decoration: BoxDecoration(
+                        color: Color.fromRGBO(0, 197, 0, 1),
+                        shape: BoxShape.circle),
+                  )
+                ],
               ),
             ],
           ),

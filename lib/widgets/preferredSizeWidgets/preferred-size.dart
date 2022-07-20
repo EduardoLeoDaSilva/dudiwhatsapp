@@ -15,9 +15,9 @@ class CustomTabBarWithIcon extends StatelessWidget
       children: [
         IconButton(
           onPressed: () => function,
-          icon: const Icon(Icons.camera_alt_rounded),
+          icon: const Icon(Icons.camera_alt_rounded, color:  Color.fromRGBO(138, 179, 175, 1),),
         ),
-        Expanded(
+       const Expanded(
           child: TabBar(
               indicatorSize: TabBarIndicatorSize.label,
               indicatorColor: Colors.white,

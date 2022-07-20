@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
+                backgroundColor: const Color.fromRGBO(7, 94, 84, 1),
                 title: const Text(
                   'DudiZap',
                   style: TextStyle(fontSize: 27),
