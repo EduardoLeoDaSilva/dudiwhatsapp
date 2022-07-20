@@ -7,7 +7,7 @@ class User {
   User();
 
   User.fromJson(Map map) {
-    id = map[id];
+    id = map['id'];
     name = map['name'];
     email = map['email'];
     users = map['users'];
